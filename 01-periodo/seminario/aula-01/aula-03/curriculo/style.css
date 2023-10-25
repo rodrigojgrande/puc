@@ -1,0 +1,5 @@
+body {background-image:url("background.jpg");  background-size: auto;}
+h1 {color: blue; margin-left: 40px;}
+
+p.center {text-align: center; color: red;}
+p.large {font-size: 300%;}
