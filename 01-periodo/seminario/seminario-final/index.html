@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Rodrigo Grande">
+    <title>Seminario Final</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/login.js"></script>
+    <script src="js/curriculo.js"></script>
+    <script src="js/dadospessoais.js"></script>
+    <script src="js/experiencias.js"></script>
+    <script src="js/formacao.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body class="text-center">
+
+    <div class="accordion container mt-5" id="accordion">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+
+                <h1 class="mb-1">Seminário 2023/02</h1>
+                <p class="fw-bold mb-5">Rodrigo Grande</p>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLogin" aria-expanded="false" aria-controls="collapseLogin">
+                            Login
+                        </button>
+                    </h2>
+
+                    <div id="collapseLogin" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+
+                            <div class="card card-body">
+                                <nav class="navbar fixed-bottom navbar-light bg-light">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <button class="btn btn-lg btn-primary" onclick="login()">Aumentar</button>
+                                    </div>
+                                </nav>
+
+                                <main class="form-signin">
+                                    <form method="POST" action="curriculo.html">
+                                        <h1 class="h3 mb-3 fw-normal" id="llogin">Login</h1>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingInput"
+                                                placeholder="Digite o seu Usuário" required>
+                                            <label for="floatingInput" id="lusuario">Usuário</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="floatingPassword"
+                                                placeholder="Senha" required>
+                                            <label for="floatingPassword" id="lsenha">Senha</label>
+                                        </div>
+
+                                        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit"><span
+                                                id="lentrar" class="">Entrar</span></button>
+                                        <button class="mt-3 w-100 btn btn-lg btn-danger" type="reset"><span id="llimpar"
+                                                class="">Limpar</span></button>
+                                    </form>
+                                </main>
+
+                            </div><!-- /card-->
+                        </div><!-- /accordion-body-->
+                    </div><!-- /accordion-collapse-->
+                </div><!-- /accordion-item-->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseCurriculo" aria-expanded="false" aria-controls="collapseCurriculo">
+                            Curriculo
+                        </button>
+                    </h2>
+
+                    <div id="collapseCurriculo" class="accordion-collapse collapse collapsed"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <div class="card card-body">
+
+                                <nav class="navbar fixed-bottom navbar-light bg-light">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <button class="btn btn-lg btn-primary" onclick="curriculo()">Aumentar</button>
+                                    </div>
+                                </nav>
+
+                                <main class="form-signin">
+                                    <form>
+                                        <h1 class="h3 mb-3 fw-normal" id="ccurriculo">Meu Currículo</h1>
+
+                                        <div class="form-floating container">
+                                            <div class="row text-center pt-3"><a
+                                                    class="btn btn-outline-primary justify-content-center" role="button"
+                                                    aria-disabled="true" href="dadospessoais.html"><span
+                                                        id="cdadospessoais" class="">Dados Pessoais</span></a></div>
+                                            <div class="row text-center pt-3"><a
+                                                    class="btn btn-outline-primary justify-content-center" role="button"
+                                                    aria-disabled="true" href="experiencias.html"><span
+                                                        id="cexperiencias" class="">Experiências</span></a></div>
+                                            <div class="row text-center pt-3"><a
+                                                    class="btn btn-outline-primary justify-content-center" role="button"
+                                                    aria-disabled="true" href="formacao.html"><span id="cformacao"
+                                                        class="">Formação</span></a></div>
+                                        </div>
+
+                                    </form>
+                                </main>
+
+                            </div><!-- /card-->
+                        </div><!-- /accordion-body-->
+                    </div><!-- /accordion-collapse-->
+                </div><!-- /accordion-item-->
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseDadosPessoais" aria-expanded="false"
+                            aria-controls="collapseDadosPessoais">
+                            Dados Pessoais
+                        </button>
+                    </h2>
+
+                    <div id="collapseDadosPessoais" class="accordion-collapse collapse collapsed"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <div class="card card-body">
+
+                                <nav class="navbar fixed-bottom navbar-light bg-light">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <button class="btn btn-lg btn-primary"
+                                            onclick="dadospessoais()">Aumentar</button>
+                                    </div>
+                                </nav>
+
+                                <main class="form-signin">
+                                    <form method="POST" action="curriculo.html">
+                                        <h1 class="h3 mb-3 fw-normal" id="ddados">Dados Pessoais</h1>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Nome Completo"
+                                                required>
+                                            <label for="floatingInput"><span id="dnomecompleto" class="">Nome
+                                                    Completo</span></label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" placeholder="E-mail" required>
+                                            <label for="floatingEmail"><span id="demail" class="">E-mail</span></label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Telefone" required>
+                                            <label for="floatingInput" id="telefone"><span id="dtelefone"
+                                                    class="">Telefone</span></label>
+                                        </div>
+
+                                        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit"><span
+                                                id="dentrar" class="">Voltar</span></button>
+                                        <button class="mt-3 w-100 btn btn-lg btn-danger" type="reset"><span id="dlimpar"
+                                                class="">Limpar</span></button>
+                                    </form>
+                                </main>
+
+                            </div><!-- /card-->
+                        </div><!-- /accordion-body-->
+                    </div><!-- /accordion-collapse-->
+                </div><!-- /accordion-item-->
+
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseExperiencias" aria-expanded="false"
+                            aria-controls="collapseExperiencias">
+                            Experiencias
+                        </button>
+                    </h2>
+
+                    <div id="collapseExperiencias" class="accordion-collapse collapse collapsed"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <div class="card card-body">
+
+                                <nav class="navbar fixed-bottom navbar-light bg-light">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <button class="btn btn-lg btn-primary"
+                                            onclick="experiencias()">Aumentar</button>
+                                    </div>
+                                </nav>
+
+                                <main class="form-signin">
+                                    <form method="POST" action="curriculo.html">
+                                        <h1 class="h3 mb-3 fw-normal" id="eexperiencias">Experiências</h1>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Instituição" required>
+                                            <label for="floatingInput"><span id="einstituicao"
+                                                    class="">Instituição</label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Atividade" required>
+                                            <label for="floatingText"><span id="eatividade"
+                                                    class="">Atividade</span></label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control" placeholder="Data" required>
+                                            <label for="floatingDate"><span id="edata" class="">Data</span></label>
+                                        </div>
+
+                                        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit"><span
+                                                id="eentrar" class="">Voltar</span></button>
+                                        <button class="mt-3 w-100 btn btn-lg btn-danger" type="reset"><span id="elimpar"
+                                                class="">Limpar</span></button>
+                                    </form>
+                                </main>
+
+                            </div><!-- /card-->
+                        </div><!-- /accordion-body-->
+                    </div><!-- /accordion-collapse-->
+                </div><!-- /accordion-item-->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFormação" aria-expanded="false" aria-controls="collapseFormação">
+                            Formação
+                        </button>
+                    </h2>
+
+                    <div id="collapseFormação" class="accordion-collapse collapse collapsed"
+                        data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <div class="card card-body">
+
+                                <nav class="navbar fixed-bottom navbar-light bg-light">
+                                    <div class="container-fluid d-flex justify-content-center">
+                                        <button class="btn btn-lg btn-primary" onclick="formacao()">Aumentar</button>
+                                    </div>
+                                </nav>
+
+                                <main class="form-signin">
+                                    <form method="POST" action="curriculo.html">
+                                        <h1 class="h3 mb-3 fw-normal" id="fformacao">Formação</h1>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Instituição" required>
+                                            <label for="floatingInput"><span id="finstituicao"
+                                                    class="">Instituição</span></label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Curso" required>
+                                            <label for="floatingText"><span id="fcurso" class="">Curso</span></label>
+                                        </div>
+
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" placeholder="Período" required>
+                                            <label for="floatingInput"><span id="fperiodo"
+                                                    class="">Período</span></label>
+                                        </div>
+
+                                        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit"><span
+                                                id="fentrar" class="">Voltar</span></button>
+                                        <button class="mt-3 w-100 btn btn-lg btn-danger" type="reset"><span id="flimpar"
+                                                class="">Limpar</span></button>
+                                    </form>
+                                </main>
+
+                            </div><!-- /card-->
+                        </div><!-- /accordion-body-->
+                    </div><!-- /accordion-collapse-->
+                </div><!-- /accordion-item-->
+
+                <button onclick="window.print();" class="btn btn-outline-primary mt-5">Imprimir</button>
+
+            </div><!--/col-->
+        </div><!--/row-->
+    </div><!-- /accordion-->
+
+</body>
+
+</html>
