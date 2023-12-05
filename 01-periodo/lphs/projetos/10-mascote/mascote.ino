@@ -97,7 +97,15 @@ void loop(){
     delay(500);
 
     // <LEFT ARM>
-    for(positionLeftArm = 90; positionLeftArm >= 0; positionLeftArm--) {
+    for(positionLeftArm = 90; positionLeftArm < 180; positionLeftArm++) {
+      leftArm.write(positionLeftArm);
+    }
+    // </LEFT ARM>
+
+     delay(500);
+
+    // <LEFT ARM>
+    for(positionLeftArm = 180; positionLeftArm >= 0; positionLeftArm--) {
       leftArm.write(positionLeftArm);
     }
     // </LEFT ARM>
