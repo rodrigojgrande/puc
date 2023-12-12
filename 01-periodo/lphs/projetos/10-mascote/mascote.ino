@@ -1,27 +1,11 @@
 /*
-DOCUMENTAÇÃO
-Portas Utilizando:
-02 => LCD
-03 => LCD
-04 => LCD
-05 => LCD
-08 => PIR
-09 =>  SERVO
-10 => SERVO
-11 => LCD
-12 => LCD
+PROJETO FINAL - MASCOTE
 
-Portas Livres: 06 - 07 - 13
-
-Fios:
-Vermelho: 5V
-Marrom: GND
-Laranja: Portas
-Roxo: Potenciometro
-Azul: Servo Right Arm
-Verde: Servo Left Arm 
-Amarelo: Pir Sensor
-
+INTEGRANTES: 
+- Enrico Araujo
+- Julia Romao
+- Nicole Castro
+- Rodrigo Grande
 
 */
 
@@ -130,3 +114,28 @@ void loop(){
   // </PIR>
   delay(1000);
 }
+
+/*
+DOCUMENTAÇÃO
+Portas Utilizando:
+02 => LCD
+03 => LCD
+04 => LCD
+05 => LCD
+08 => PIR
+09 =>  SERVO
+10 => SERVO
+11 => LCD
+12 => LCD
+
+Portas Livres: 06 - 07 - 13
+
+Fios:
+Vermelho: 5V
+Marrom: GND
+Laranja: Portas
+Roxo: Potenciometro
+Azul: Servo Right Arm
+Verde: Servo Left Arm 
+Amarelo: Pir Sensor
+*/
