@@ -1,0 +1,23 @@
+1. Fazer o download da biblioteca graphics.h e copiá-la para a pasta c:\CodeBlocks\MinGW\include
+2. Fazer o download da biblioteca libbgi.a e copiá-la para a pasta c:\CodeBlocks\MinGW\lib
+3. Acessar o ambiente CodeBlocks e configurar as opções de link-edição, realizando o seguinte procedimento:
+    Na opção Settings >> Compiler and Debugger >>  Linker Settings >> Other linker options, adicionar as seguintes interfaces para bibliotecas:
+    -lbgi
+    -lgdi32
+    -lcomdlg32
+    -luuid
+    -loleaut32
+    -lole32
+    
+    
+Realizados os procedimentos de configuração, pode-se testar o seguinte código-fonte, sempre utilizando a extensão .cpp, ao invés da extensão .c.
+
+  #include <graphics.h> 
+  main() 
+  { 
+      initwindow(400,300); // cria e abre uma janela gráfica com 400x300 pixels (largura x altura)
+      moveto(0,0);         // move o cursor gráfico para a coordenada 0,0 (origem do plano cartesiano)
+      lineto(50,50);       // desenha (plota) uma linha até a coordenada 50,50 (x,y)
+      while(!kbhit());     // aguarda, em loop, até que uma tecla seja pressionada
+      closegraph();        // fecha o modo gráfico e retorna ao modo de saída-padrão (texto)
+  }
