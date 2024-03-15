@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val="OR"/>
+      <a name="font" val="SansSerif bold 14"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <main name="A"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val="OR"/>
+      <a name="font" val="SansSerif bold 14"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="A">
+    <a name="circuit" val="A"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(110,170)" to="(140,170)"/>
+    <wire from="(240,190)" to="(250,190)"/>
+    <wire from="(140,170)" to="(140,210)"/>
+    <wire from="(140,210)" to="(190,210)"/>
+    <wire from="(140,170)" to="(190,170)"/>
+    <wire from="(250,190)" to="(300,190)"/>
+    <comp lib="6" loc="(122,38)" name="Text">
+      <a name="text" val="Para cada um dos circuitos abaixo:"/>
+    </comp>
+    <comp lib="1" loc="(250,190)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NAND"/>
+    </comp>
+    <comp lib="6" loc="(424,198)" name="Text">
+      <a name="text" val="= A"/>
+    </comp>
+    <comp lib="6" loc="(112,57)" name="Text">
+      <a name="text" val="- Fazer a simulação no Logisim;"/>
+    </comp>
+    <comp lib="6" loc="(38,172)" name="Text">
+      <a name="text" val="a)"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="0" loc="(300,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Y"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(393,182)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(429,183)" name="Text">
+      <a name="text" val="_"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="6" loc="(94,80)" name="Text">
+      <a name="text" val="- Montar a tabela verdade;"/>
+    </comp>
+    <comp lib="6" loc="(97,121)" name="Text">
+      <a name="text" val="- Simplificar cada equação"/>
+    </comp>
+    <comp lib="6" loc="(383,198)" name="Text">
+      <a name="text" val="Y = A . A"/>
+    </comp>
+    <comp lib="6" loc="(105,101)" name="Text">
+      <a name="text" val="- Achar a equação equivalente"/>
+    </comp>
+    <comp lib="0" loc="(110,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+  </circuit>
+  <circuit name="B">
+    <a name="circuit" val="B"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(110,170)" to="(140,170)"/>
+    <wire from="(140,170)" to="(140,210)"/>
+    <wire from="(140,270)" to="(140,310)"/>
+    <wire from="(350,240)" to="(400,240)"/>
+    <wire from="(140,210)" to="(190,210)"/>
+    <wire from="(140,170)" to="(190,170)"/>
+    <wire from="(140,270)" to="(190,270)"/>
+    <wire from="(140,310)" to="(190,310)"/>
+    <wire from="(120,310)" to="(140,310)"/>
+    <wire from="(290,190)" to="(290,220)"/>
+    <wire from="(290,260)" to="(290,290)"/>
+    <wire from="(250,190)" to="(290,190)"/>
+    <wire from="(250,290)" to="(290,290)"/>
+    <comp lib="6" loc="(539,231)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(122,38)" name="Text">
+      <a name="text" val="Para cada um dos circuitos abaixo:"/>
+    </comp>
+    <comp lib="6" loc="(601,232)" name="Text">
+      <a name="text" val="_    _"/>
+    </comp>
+    <comp lib="1" loc="(250,290)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NAND"/>
+    </comp>
+    <comp lib="6" loc="(597,246)" name="Text">
+      <a name="text" val="= A + B "/>
+    </comp>
+    <comp lib="6" loc="(483,246)" name="Text">
+      <a name="text" val="Y = A . A"/>
+    </comp>
+    <comp lib="6" loc="(493,230)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="0" loc="(400,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Y"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(517,223)" name="Text">
+      <a name="text" val="_____________"/>
+    </comp>
+    <comp lib="6" loc="(97,121)" name="Text">
+      <a name="text" val="- Simplificar cada equação"/>
+    </comp>
+    <comp lib="0" loc="(120,310)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="6" loc="(537,247)" name="Text">
+      <a name="text" val="B . B"/>
+    </comp>
+    <comp lib="6" loc="(513,245)" name="Text">
+      <a name="text" val="x"/>
+    </comp>
+    <comp lib="6" loc="(325,154)" name="Text">
+      <a name="text" val="OR"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="1" loc="(250,190)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NAND"/>
+    </comp>
+    <comp lib="6" loc="(268,281)" name="Text">
+      <a name="text" val="B . B"/>
+    </comp>
+    <comp lib="1" loc="(350,240)" name="NAND Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NAND"/>
+    </comp>
+    <comp lib="6" loc="(600,226)" name="Text">
+      <a name="text" val="_    _"/>
+    </comp>
+    <comp lib="0" loc="(110,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="6" loc="(112,57)" name="Text">
+      <a name="text" val="- Fazer a simulação no Logisim;"/>
+    </comp>
+    <comp lib="6" loc="(94,80)" name="Text">
+      <a name="text" val="- Montar a tabela verdade;"/>
+    </comp>
+    <comp lib="6" loc="(38,172)" name="Text">
+      <a name="text" val="b)"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(271,195)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(105,101)" name="Text">
+      <a name="text" val="- Achar a equação equivalente"/>
+    </comp>
+    <comp lib="6" loc="(652,247)" name="Text">
+      <a name="text" val="= A + B "/>
+    </comp>
+    <comp lib="6" loc="(270,265)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(269,212)" name="Text">
+      <a name="text" val=" A . A"/>
+    </comp>
+  </circuit>
+  <circuit name="C">
+    <a name="circuit" val="C"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(110,170)" to="(140,170)"/>
+    <wire from="(240,190)" to="(250,190)"/>
+    <wire from="(140,170)" to="(140,210)"/>
+    <wire from="(140,210)" to="(190,210)"/>
+    <wire from="(140,170)" to="(190,170)"/>
+    <wire from="(250,190)" to="(300,190)"/>
+    <comp lib="6" loc="(122,38)" name="Text">
+      <a name="text" val="Para cada um dos circuitos abaixo:"/>
+    </comp>
+    <comp lib="1" loc="(250,190)" name="NOR Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NOR"/>
+    </comp>
+    <comp lib="6" loc="(424,183)" name="Text">
+      <a name="text" val="_"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="6" loc="(105,101)" name="Text">
+      <a name="text" val="- Achar a equação equivalente"/>
+    </comp>
+    <comp lib="0" loc="(300,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Y"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(388,181)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(112,57)" name="Text">
+      <a name="text" val="- Fazer a simulação no Logisim;"/>
+    </comp>
+    <comp lib="6" loc="(38,172)" name="Text">
+      <a name="text" val="c)"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(419,198)" name="Text">
+      <a name="text" val="= A"/>
+    </comp>
+    <comp lib="6" loc="(94,80)" name="Text">
+      <a name="text" val="- Montar a tabela verdade;"/>
+    </comp>
+    <comp lib="6" loc="(97,121)" name="Text">
+      <a name="text" val="- Simplificar cada equação"/>
+    </comp>
+    <comp lib="6" loc="(378,197)" name="Text">
+      <a name="text" val="Y = A + A"/>
+    </comp>
+    <comp lib="0" loc="(110,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+  </circuit>
+  <circuit name="D">
+    <a name="circuit" val="D"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(110,170)" to="(140,170)"/>
+    <wire from="(140,170)" to="(140,210)"/>
+    <wire from="(140,270)" to="(140,310)"/>
+    <wire from="(350,240)" to="(400,240)"/>
+    <wire from="(140,210)" to="(190,210)"/>
+    <wire from="(140,170)" to="(190,170)"/>
+    <wire from="(140,270)" to="(190,270)"/>
+    <wire from="(140,310)" to="(190,310)"/>
+    <wire from="(120,310)" to="(140,310)"/>
+    <wire from="(290,190)" to="(290,220)"/>
+    <wire from="(290,260)" to="(290,290)"/>
+    <wire from="(250,190)" to="(290,190)"/>
+    <wire from="(250,290)" to="(290,290)"/>
+    <comp lib="6" loc="(271,195)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(515,248)" name="Text">
+      <a name="text" val="x"/>
+    </comp>
+    <comp lib="6" loc="(546,270)" name="Text">
+      <a name="text" val="_    _"/>
+    </comp>
+    <comp lib="0" loc="(110,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(250,190)" name="NOR Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NOR"/>
+    </comp>
+    <comp lib="6" loc="(269,212)" name="Text">
+      <a name="text" val=" A + A"/>
+    </comp>
+    <comp lib="6" loc="(483,284)" name="Text">
+      <a name="text" val="Y = (A + B)"/>
+    </comp>
+    <comp lib="6" loc="(122,38)" name="Text">
+      <a name="text" val="Para cada um dos circuitos abaixo:"/>
+    </comp>
+    <comp lib="6" loc="(94,80)" name="Text">
+      <a name="text" val="- Montar a tabela verdade;"/>
+    </comp>
+    <comp lib="6" loc="(560,284)" name="Text">
+      <a name="text" val="= A x B = A x B"/>
+    </comp>
+    <comp lib="6" loc="(491,269)" name="Text">
+      <a name="text" val="_    _"/>
+    </comp>
+    <comp lib="1" loc="(350,240)" name="NOR Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NOR"/>
+    </comp>
+    <comp lib="6" loc="(270,265)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(105,101)" name="Text">
+      <a name="text" val="- Achar a equação equivalente"/>
+    </comp>
+    <comp lib="6" loc="(112,57)" name="Text">
+      <a name="text" val="- Fazer a simulação no Logisim;"/>
+    </comp>
+    <comp lib="0" loc="(120,310)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="6" loc="(268,281)" name="Text">
+      <a name="text" val="B + B"/>
+    </comp>
+    <comp lib="6" loc="(97,121)" name="Text">
+      <a name="text" val="- Simplificar cada equação"/>
+    </comp>
+    <comp lib="6" loc="(38,172)" name="Text">
+      <a name="text" val="d)"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="6" loc="(546,266)" name="Text">
+      <a name="text" val="_    _"/>
+    </comp>
+    <comp lib="6" loc="(540,247)" name="Text">
+      <a name="text" val="(B + B)"/>
+    </comp>
+    <comp lib="6" loc="(539,231)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(480,246)" name="Text">
+      <a name="text" val="Y = (A + A)"/>
+    </comp>
+    <comp lib="6" loc="(491,264)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="6" loc="(517,223)" name="Text">
+      <a name="text" val="_____________"/>
+    </comp>
+    <comp lib="6" loc="(493,230)" name="Text">
+      <a name="text" val="____"/>
+    </comp>
+    <comp lib="0" loc="(400,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Y"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(250,290)" name="NOR Gate">
+      <a name="inputs" val="2"/>
+      <a name="label" val="NOR"/>
+    </comp>
+  </circuit>
+</project>
