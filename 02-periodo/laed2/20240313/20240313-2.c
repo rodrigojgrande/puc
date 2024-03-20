@@ -11,7 +11,7 @@ Fibonacci(n) = Fibonacci(n-1)+Fibonacci(n-2)
 int fibonacci(int n);
 
 int main(){
-    int resultado = fibonacci(5);
+    int resultado = fibonacci(10);
 
     printf("%d\n", resultado);
 
@@ -22,14 +22,18 @@ int main(){
 int fibonacci(int n) {
     // int resultado = 0;
 
-    if (fibonacci(0)){
+    if (n == 0){
+
         return 0;
-    }
 
-    else if (fibonacci(1)){
+    } else if (n == 1){
+
         return 1;
-    }
 
-    return fibonacci(n-1)+fibonacci(n-2);
+    } else {
+
+        return fibonacci(n-1)+fibonacci(n-2);
+
+    }
 
 }
