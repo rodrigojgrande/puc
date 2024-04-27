@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1713358828 source:/home/PUCMINAS/1494305/Documentos/20240417/vetordinamico/main.c
+	<stdio.h>
+	<stdlib.h>
+	"vetordinamico.h"
+
+1712150483 /home/PUCMINAS/1494305/Documentos/20240417/vetordinamico/vetordinamico.h
+
