@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1713359852 source:/home/PUCMINAS/1494305/Documentos/vetordinamico/main.c
+	<stdio.h>
+	<stdlib.h>
+	"vetordinamico.h"
+
+1713359336 /home/PUCMINAS/1494305/Documentos/vetordinamico/vetordinamico.h
+
+1713359929 source:/home/PUCMINAS/1494305/Documentos/vetordinamico/vetordinamico.c
+	"vetordinamico.h"
+	<stdio.h>
+	<stdlib.h>
+
