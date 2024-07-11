@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1717188871 source:c:\users\grande\downloads\gol\main.cpp
+	<GLUT/freeglut.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
