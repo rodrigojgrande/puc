@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1715647096 source:c:\users\grande\downloads\tarefa-02\main.cpp
+	<GL/freeglut.h>
+	<math.h>
+	<windows.h>
+	<stdio.h>
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1426360528 d:\one drive\puc\onedrive - sga.pucminas.br\puc\aulas\02° período\m3d\freeglut\include\gl\glut.h
+	"freeglut_std.h"
+
