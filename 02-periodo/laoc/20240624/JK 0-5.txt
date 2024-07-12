@@ -1,0 +1,28 @@
+JK 0-5
+
+A B C  A B C  JA KA JB KB JC KC
+0 0 0  0 0 1   0  X  0  X  1  X
+0 0 1  0 1 0   0  X  1  X  X  1
+0 1 0  0 1 1   0  X  X  0  1  X
+0 1 1  1 0 0   1  X  X  1  X  1
+1 0 0  1 0 1   X  0  0  X  1  X
+1 0 1  0 0 0   X  1  0  X  X  1
+
+
+JA A'B' A'B AB AB' = BC
+C'  0    0  X   X
+C   0    1  X   X
+
+KA A'B' A'B AB AB' = C
+C'  X    X  X   0
+C   X    X  X   1
+
+JB A'B' A'B AB AB' = A'C
+C'  0    X  X   0
+C   1    X  X   0
+
+KB A'B' A'B AB AB' = C
+C'  X    0  X   X
+C   X    1  X   X
+
+JC = 1 KD =1

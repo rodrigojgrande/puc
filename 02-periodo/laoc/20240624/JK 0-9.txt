@@ -1,0 +1,52 @@
+JK 0-9
+
+
+A B C D  A B C D  JA KA JB KB JC KC JD KD
+0 0 0 0  0 0 0 1   0  X  0  X  0  X  1  X
+0 0 0 1  0 0 1 0   0  X  0  X  1  X  X  1
+0 0 1 0  0 0 1 1   0  X  0  X  X  0  1  X
+0 0 1 1  0 1 0 0   0  X  1  X  X  1  X  1
+0 1 0 0  0 1 0 1   0  X  X  0  0  X  1  X
+0 1 0 1  0 1 1 0   0  X  X  0  1  X  X  1
+0 1 1 0  0 1 1 1   0  X  X  0  X  0  1  X
+0 1 1 1  1 0 0 0   1  X  X  1  X  1  X  1
+1 0 0 0  1 0 0 1   X  0  0  X  0  X  1  X
+1 0 0 1  0 0 0 0   X  1  0  X  0  X  X  1
+
+JA   A'B' A'B AB AB' = BCD
+C'D'  0    0  X   X
+C'D   0    0  X   X
+CD    0    1  X   X
+CD'   0    0  X   X
+
+KA   A'B' A'B AB AB' = D
+C'D'  X    X  X   0
+C'D   X    X  X   1
+CD    X    X  X   X
+CD'   X    X  X   X
+
+JB   A'B' A'B AB AB' = CD
+C'D'  0    X  X   0
+C'D   0    X  X   0
+CD    1    X  X   X
+CD'   0    X  X   X
+
+KB   A'B' A'B AB AB' = CD
+C'D'  X    0  X   X
+C'D   X    0  X   X
+CD    X    1  X   X
+CD'   X    0  X   X
+
+JC   A'B' A'B AB AB' = A'D
+C'D'  0    0  X   0
+C'D   1    1  X   0
+CD    X    X  X   X
+CD'   X    X  X   X
+
+KC   A'B' A'B AB AB' = D
+C'D'  X    X  X   X
+C'D   X    X  X   X
+CD    1    1  X   X
+CD'   0    0  X   X
+
+JD = 1 KD = 1

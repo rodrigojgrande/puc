@@ -1,0 +1,23 @@
+
+JK 0-2
+
+A B  A B   JA KA JB KB
+0 0  0 1    0  X  1  X
+0 1  1 0    1  X  X  1
+1 0  0 0    X  1  0  X
+
+JA A' A = B
+B' 0  X
+B  1  X
+
+KA A' A = 1
+B' X  1
+B  X  X
+
+JB A' A = A'
+B' 1  0
+B  X  X
+
+KB A' A = 1
+B' X  X
+B  1  X
