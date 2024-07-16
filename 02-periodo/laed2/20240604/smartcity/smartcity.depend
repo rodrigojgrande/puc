@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1716985433 source:c:\users\nicol\documents\2° semestre\smartcity\smartcity.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1716984632 c:\users\nicol\documents\2° semestre\smartcity\smartcity.h
+
