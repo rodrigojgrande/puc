@@ -1,0 +1,87 @@
+# depslib dependency file v1.0
+1716985433 source:c:\users\nicol\documents\2° semestre\smartcity\smartcity.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1716984632 c:\users\nicol\documents\2° semestre\smartcity\smartcity.h
+
+1719253720 source:c:\users\nicol\downloads\smartcityv3 (1)\smartcityv3\smartcity\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719253800 c:\users\nicol\downloads\smartcityv3 (1)\smartcityv3\smartcity\smartcity.h
+
+1719253491 source:c:\users\nicol\downloads\smartcityv3 (1)\smartcityv3\smartcity\smartcity.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719253811 source:c:\users\nicol\downloads\smartcityv3 (1)\smartcityv3\smartcity\fila.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719253534 source:c:\users\nicol\downloads\smartcityv3 (1)\smartcityv3\smartcity\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260112 source:c:\users\enric\downloads\smartcityv4\smartcityv3\smartcity\fila.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260109 c:\users\enric\downloads\smartcityv4\smartcityv3\smartcity\smartcity.h
+
+1719260113 source:c:\users\enric\downloads\smartcityv4\smartcityv3\smartcity\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260161 source:c:\users\enric\downloads\smartcityv4\smartcityv3\smartcity\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260111 source:c:\users\enric\downloads\smartcityv4\smartcityv3\smartcity\smartcity.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260421 source:c:\users\enric\downloads\smartcityv5\smartcity\fila.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260423 c:\users\enric\downloads\smartcityv5\smartcity\smartcity.h
+
+1719260420 source:c:\users\enric\downloads\smartcityv5\smartcity\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719260422 source:c:\users\enric\downloads\smartcityv5\smartcity\smartcity.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
+1719261055 source:c:\users\enric\downloads\smartcityv5\smartcity\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"smartcity.h"
+
