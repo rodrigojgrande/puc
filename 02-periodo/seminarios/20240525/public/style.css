@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+/* Tags */
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    color: #DA272B;
+    font-size: 30px;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    height: 36px;
+    border-radius: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+
+}
+
+/* Classes - CabeĆ§alho */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.topo div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.topo div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Classes - Row */
+.row {
+    display: flex;
+}
+
+/* Classes - Menu Lateral */
+.menu {
+    background-color: #252525;
+    min-width: 250px;
+    min-height: calc(100vh - 60px);
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 10px 20px;
+}
+
+.menu li img {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Classes - Conteudo */
+.conteudo {
+    /*display: flex;*/
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Classes - Filme */
+.filme {
+    width: 200px;
+    background-color: #252525;
+    height: 340px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.filme img {
+    width: 200px;
+    height: 280px;
+    border-radius: 8px 8px 0 0;
+}
+
+.filme p {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.verde {
+    background-color: green;
+}
+
+.vermelho {
+    background-color: red;
+}
