@@ -1,0 +1,23 @@
+body{
+    background-image: linear-gradient(to bottom right, #eee, #555);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.formulário > form{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+}
+
+.resultados{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+.resultados > div{
+    margin: 10px auto;
+    padding: 10px;
+    border: #555 1px solid;
+    
+}
