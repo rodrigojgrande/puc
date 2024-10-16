@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #FFF;
+    background: url('imagens/background.png') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.topo {
+    background: #333;
+    height: 80px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 250px;
+    margin-left: 80px;
+}
+
+.aviso {
+    font-size: 25px;
+}
+
+.botao-entrar {
+    border: 0;
+    background: #BA0100;
+    color: #FFF;
+    margin-right: 100px;
+    padding: 10px 80px;
+    font-size: 19px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.botao-entrar:hover {
+    background: #9D0100;
+}
+
+.conteudo {
+    display: flex; 
+    min-height: calc(100vh - 430px);
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+
+.selecionar-jogo {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.secao:last-child {
+    margin: 0;
+}
+
+.secao .titulo {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.secao .opcoes {
+    display: flex;
+    width: 100%;
+}
+
+.secao .opcoes button {
+    width: 100%;
+    margin: 0 5px;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.secao .opcoes button.selecionado, .avancar {
+    background-color: #28A745;
+    color: #FFF;
+}
+
+.loading-overlay {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #FFF;
+}
+
+.loading-overlay .container {
+    background: rgba(0,0,0,0.8);
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay .container p {
+    font-size: 30px;
+}
+
+.loading-overlay .container img {
+    width: 70px;
+    margin-top: 20px;
+}
+
+
+.escondido {
+    display: none;
+}
+
+.vermelho {
+    color: red;
+}

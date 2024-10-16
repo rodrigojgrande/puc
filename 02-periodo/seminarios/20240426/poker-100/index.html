@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker 100</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilos.css">
+    
+</head>
+<body>
+    <div class="topo">
+        <img src="imagens/logo.png" alt="Poker 100" class="logo">
+        <p class="aviso">POKER 100 é um site exclusivo para maiores de idade</p>
+        <button onclick="perguntarIdade()" class="botao-entrar">Entrar</button>
+    </div>
+
+    <div class="conteudo">
+        <div class="selecionar-jogo escondido">
+            <div class="secao">
+                <div class="titulo">Tipo de Jogo</div>
+                <div class="opcoes jogo">
+                    <button class="botao_Texas" onclick="selecionarJogo('botao_Texas')">Texas Hold'em</button>
+                    <button class="botao_omaha" onclick="selecionarJogo('botao_omaha')">Omaha High</button>
+                    <button class="botao_five" onclick="selecionarJogo('botao_five')">Five Card Draw</button>
+                </div>
+            </div>
+            <div class="secao qtd-jogadores">
+                <div class="titulo">Quantidade de jogadores</div>
+                <div class="opcoes">
+                    <button onclick="selecionarQtdeJogadores(this)">5</button>
+                    <button onclick="selecionarQtdeJogadores(this)">9</button>
+                </div>
+            </div>
+            <div class="secao">
+                <div class="opcoes">
+                    <button onclick="finalizar()" class="botao-continuar">Continuar</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="loading-overlay escondido">
+            <div class="container">
+                <p class="mensagem-iniciando">INICIANDO POKER 100</p>
+                <img src="imagens/loading.gif" alt="Carregando">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
