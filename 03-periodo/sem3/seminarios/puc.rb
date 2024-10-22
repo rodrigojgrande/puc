@@ -1,11 +1,34 @@
-puts "Digite o valor de X" # Escreve na tela
+# comentário
 
-x = gets.chomp.to_i # Captura uma informação
+ruby nomde_do_arquivo.rb
+idade = 25
+nome = "Aluan"
+maior_de_idade = true
+soma = 10+5
+verdadeiro = true && true
+verdadeiro = true || true
+puts "Mostra na tela"
+nome = gets.chomp
 
-puts "Digite o valor de Y" # Escreve na tela
+nomeVariavel
+nome_variavel
 
-z = gets.chomp.to_i # Captura uma informação
+to_i# transforma em Integer
 
-teste = x+z
+Case X
+	When "+"
+	when "-"
+End
 
-puts "O valor de X é #{teste}"
+case
+	if
+		if
+	else
+		elseif
+		end
+	end
+end
+
+function nome_da_funcao(var, var1)
+	...
+end
