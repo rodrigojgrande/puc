@@ -5,10 +5,11 @@ end
 
 #POO
 class Pessoa # Instanciar um objeto
+  attr_accessor :nome # public 
 
   def initialize(nome, idade) # Construtor
-    @nome = nome # Atributos
-    @idade = idade # Atributos
+    @nome = nome # Atributos (privados)
+    @idade = idade # Atributos (privados)
   end
 
   def falar # Declaração de um método
@@ -24,3 +25,6 @@ end
 var1 = Pessoa.new("Rodrigo", 26)
 var1.falar
 var1.apresentar
+
+var1.nome = "José"
+p var1.nome
