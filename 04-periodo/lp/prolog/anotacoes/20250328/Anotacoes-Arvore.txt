@@ -1,0 +1,18 @@
+% Filho = Variavel
+% pai(joao, Filho).
+
+% Teste Pai 
+% pai(X, Y).
+% pai(Pai, Filho). 
+%
+
+% Teste Mae
+% mae(X, Y).
+
+% avo(X, geraldo).
+
+% Irmaos
+% irmao(mauricio, Irmaos).
+%irmao(mauricio, bruce).
+
+tio(Tios, geraldo).
