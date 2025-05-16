@@ -1,0 +1,27 @@
+a direita
+= 
+not
+(
+]
+
+nao associativo
+nonassoc
+= 
+==
+nao igual
+
+
+
+Passo a Passo
+1. Copiar analex.l do trabalho 2 para o trabalho 3
+2. Trocar o tokens.h para sint.h
+3. Definir todos os tokens da linguagem
+4. Associatividade e precedencia dos operadores
+5. Definir das regras e o símbolo inicial
+6. lex -o analex.c analex.l gera sint.h
+7. yacc -o sint.c sint.y
+8. Rodar o yacc sint.y -o sint.c vai dar 
+9. Sempre que fizer alteração sint.y rodar o yac
+10. Sempre que fizer alteração no analex.l rodar o gcc
+11. Debugar o arquivo do yacc -v -o sint.c sint.y
+12. Comando Final: gcc -o sint sint.c -lfl

@@ -1,0 +1,262 @@
+Terminais sem uso na gramática
+
+    INT
+    IF
+    ELSE
+    WHILE
+    GE
+    DO
+    VOID
+    CHAR
+
+
+Gramática
+
+    0 $accept: ProgL $end
+
+    1 ProgL: Prog
+
+    2 Prog: Exp ';'
+
+    3 Exp: Exp '+' Exp
+    4    | Exp '-' Exp
+    5    | Exp '*' Exp
+    6    | Exp '/' Exp
+    7    | '(' Exp ')'
+    8    | NUM
+    9    | ID
+
+
+Terminais, com as regras onde eles aparecem
+
+    $end (0) 0
+    '(' (40) 7
+    ')' (41) 7
+    '*' (42) 5
+    '+' (43) 3
+    '-' (45) 4
+    '/' (47) 6
+    ';' (59) 2
+    error (256)
+    NUM (258) 8
+    ID (259) 9
+    INT (260)
+    IF (261)
+    ELSE (262)
+    WHILE (263)
+    GE (264)
+    DO (265)
+    VOID (266)
+    CHAR (267)
+
+
+Não terminais com as regras onde eles aparecem
+
+    $accept (20)
+        à esquerda: 0
+    ProgL (21)
+        à esquerda: 1
+        à direita: 0
+    Prog (22)
+        à esquerda: 2
+        à direita: 1
+    Exp (23)
+        à esquerda: 3 4 5 6 7 8 9
+        à direita: 2 3 4 5 6 7
+
+
+Estado 0
+
+    0 $accept: • ProgL $end
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    ProgL  ir ao estado 4
+    Prog   ir ao estado 5
+    Exp    ir ao estado 6
+
+
+Estado 1
+
+    8 Exp: NUM •
+
+    $padrão  reduzir usando a regra 8 (Exp)
+
+
+Estado 2
+
+    9 Exp: ID •
+
+    $padrão  reduzir usando a regra 9 (Exp)
+
+
+Estado 3
+
+    7 Exp: '(' • Exp ')'
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    Exp  ir ao estado 7
+
+
+Estado 4
+
+    0 $accept: ProgL • $end
+
+    $end  deslocar, e ir ao estado 8
+
+
+Estado 5
+
+    1 ProgL: Prog •
+
+    $padrão  reduzir usando a regra 1 (ProgL)
+
+
+Estado 6
+
+    2 Prog: Exp • ';'
+    3 Exp: Exp • '+' Exp
+    4    | Exp • '-' Exp
+    5    | Exp • '*' Exp
+    6    | Exp • '/' Exp
+
+    '+'  deslocar, e ir ao estado 9
+    '-'  deslocar, e ir ao estado 10
+    '*'  deslocar, e ir ao estado 11
+    '/'  deslocar, e ir ao estado 12
+    ';'  deslocar, e ir ao estado 13
+
+
+Estado 7
+
+    3 Exp: Exp • '+' Exp
+    4    | Exp • '-' Exp
+    5    | Exp • '*' Exp
+    6    | Exp • '/' Exp
+    7    | '(' Exp • ')'
+
+    '+'  deslocar, e ir ao estado 9
+    '-'  deslocar, e ir ao estado 10
+    '*'  deslocar, e ir ao estado 11
+    '/'  deslocar, e ir ao estado 12
+    ')'  deslocar, e ir ao estado 14
+
+
+Estado 8
+
+    0 $accept: ProgL $end •
+
+    $padrão  aceitar
+
+
+Estado 9
+
+    3 Exp: Exp '+' • Exp
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    Exp  ir ao estado 15
+
+
+Estado 10
+
+    4 Exp: Exp '-' • Exp
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    Exp  ir ao estado 16
+
+
+Estado 11
+
+    5 Exp: Exp '*' • Exp
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    Exp  ir ao estado 17
+
+
+Estado 12
+
+    6 Exp: Exp '/' • Exp
+
+    NUM  deslocar, e ir ao estado 1
+    ID   deslocar, e ir ao estado 2
+    '('  deslocar, e ir ao estado 3
+
+    Exp  ir ao estado 18
+
+
+Estado 13
+
+    2 Prog: Exp ';' •
+
+    $padrão  reduzir usando a regra 2 (Prog)
+
+
+Estado 14
+
+    7 Exp: '(' Exp ')' •
+
+    $padrão  reduzir usando a regra 7 (Exp)
+
+
+Estado 15
+
+    3 Exp: Exp • '+' Exp
+    3    | Exp '+' Exp •
+    4    | Exp • '-' Exp
+    5    | Exp • '*' Exp
+    6    | Exp • '/' Exp
+
+    '*'  deslocar, e ir ao estado 11
+    '/'  deslocar, e ir ao estado 12
+
+    $padrão  reduzir usando a regra 3 (Exp)
+
+
+Estado 16
+
+    3 Exp: Exp • '+' Exp
+    4    | Exp • '-' Exp
+    4    | Exp '-' Exp •
+    5    | Exp • '*' Exp
+    6    | Exp • '/' Exp
+
+    '*'  deslocar, e ir ao estado 11
+    '/'  deslocar, e ir ao estado 12
+
+    $padrão  reduzir usando a regra 4 (Exp)
+
+
+Estado 17
+
+    3 Exp: Exp • '+' Exp
+    4    | Exp • '-' Exp
+    5    | Exp • '*' Exp
+    5    | Exp '*' Exp •
+    6    | Exp • '/' Exp
+
+    $padrão  reduzir usando a regra 5 (Exp)
+
+
+Estado 18
+
+    3 Exp: Exp • '+' Exp
+    4    | Exp • '-' Exp
+    5    | Exp • '*' Exp
+    6    | Exp • '/' Exp
+    6    | Exp '/' Exp •
+
+    $padrão  reduzir usando a regra 6 (Exp)
