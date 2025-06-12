@@ -157,7 +157,7 @@ Atribuicao : ID '[' NUM ']' '=' Exp {?} /* V tipo indice. S tipo, place, código
 	;
 				
 Exp :
-	  Exp '+' Exp {?} /* S tipo, cod */
+	  Exp '+' Exp {$$.tipo = retorna_maior_tipo($1.tipo,$2.tipo);} /* S tipo, cod */
 	| Exp '-' Exp {?} /* S tipo, cod */
 	| Exp '*' Exp {?} /* S tipo, cod */
 	| Exp '/' Exp {?} /* S tipo, cod */
@@ -171,9 +171,9 @@ Exp :
 	| Exp AND Exp {?} /* S tipo, cod */
 	| NOT Exp {?} /*  S tipo. Não precisa implementar código*/
 	| '(' Exp ')' {?} /*  S tipo, cod*/
-	| NUM {?} /* S tipo, código */
+	| NUM {$$tipo = $1.tipo} /* S tipo, código */
 	| ID '[' NUM ']' {?}  /* V declaracao, indice. S tipo, codigo  */
-	| ID  {?} /* V declaracao. S tipo, codigo  */
+	| ID  {verifica_var_declarada($1); $$tipo = Tabela[$1].tipo;} /* V declaracao. S tipo, codigo  */
 	| STRING {} /* Ignore, não precisa implementar  */
 	;   
 	
@@ -186,5 +186,6 @@ int main(int argc, char **argv) {
 
 /* Funcoes auxiliares podem ser implementadas aqui */
 void verifica_var_declarada(?){
+	// Verifica na tabela de símbolos se a váriavel foi declarada
 	?
 }

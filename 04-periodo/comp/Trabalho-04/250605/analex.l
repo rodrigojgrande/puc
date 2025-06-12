@@ -47,7 +47,7 @@ LETRA [a-zA-Z_]
 
 
 "=" {return '=';}
-
+y
 
 "["	  {return '[';}
 "]"	  {return ']';}
@@ -59,7 +59,7 @@ LETRA [a-zA-Z_]
 ","   {return ',';}
 
 
-{DIGITO}+("."{DIGITO}+) { yylval.node.tipo = FLOAT; yylval.node.place = atoi(yytext);return NUM;}
+{DIGITO}+("."{DIGITO}+) { ylval.node.tipo = FLOAT; yylval.node.place = atoi(yytext);return NUM;}
 
 {DIGITO}+	{ yylval.node.tipo = INT; yylval.node.place = strtol(yytext, NULL, 10); return NUM;}
 

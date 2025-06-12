@@ -21,8 +21,6 @@ int i;
 	     return i; 
 	return -1;     
 }
-
-// Retorna a posição do ID na tabela de símbolos
 int insere(char *nome) {
 int i,pos;
 struct symbol aux;	
