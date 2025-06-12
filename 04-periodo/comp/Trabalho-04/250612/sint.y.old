@@ -1,0 +1,216 @@
+%{ 
+#include <stdio.h>
+#include <stdlib.h>
+#include "analex.c"
+extern FILE *yyin;
+extern int linha;
+int yylex();
+void yyerror(const char *s);
+%}
+
+%token NUM 
+%token STRINGS
+%token ID 
+%token IF 
+%token ELSE
+%token FOR
+%token WHILE
+%token INT
+%token FLOAT
+%token CHAR
+%token VOID
+%token AND
+%token OR
+%token NOT
+%token MENOR
+%token MAIOR
+%token IGUAL
+%token RETURN
+%token DOUBLE
+%token SWITCH
+%token CASE
+%token BREAK
+%token DIFERENTE
+%token ENDIF
+
+
+%right '='
+%right NOT
+%left '+' '-'
+%left '*' '/'
+%left OR
+%left AND
+%nonassoc IGUAL DIFERENTE
+%nonassoc '<' '>' MAIOR MENOR
+
+%start Programa
+%%
+
+Programa						: ListaFuncoes
+										{printf("Sem erros sintáticos\n");}
+  									;
+
+ListaFuncoes 				: Funcao
+										| ListaFuncoes Funcao
+										;
+
+Funcao							:	TipoRetorno ID '(' Parametros ')' BlocoComandos
+										;
+
+TipoRetorno					: INT
+										| FLOAT
+										| CHAR
+										| DOUBLE
+										| VOID
+										;
+
+Parametros					: ListaParametros
+										|
+										;
+
+ListaParametros			:	Parametro
+										| ListaParametros ',' Parametro
+										;
+
+Parametro						: TipoVariavel ID
+										| TipoVariavel
+										;
+
+BlocoComandos				:	'{'	ListaComandos '}'
+										;
+
+ListaComandos				:
+										| ListaComandos Comando
+										;
+
+Comando							: Declaracao ';'
+										| Atribuicao ';'
+										| ChamadaFuncao ';'
+										| ComandoIfElse
+										| ComandoWhile
+										| ComandoFor
+										| ComandoSwitch
+										|	BlocoComandos
+										| RETURN ExpressaoSimples ';'
+										| RETURN ';'
+										| BREAK ';'
+										| ';'
+										;
+
+ComandoIfElse 			:	IF '(' ExpressaoSimples ')' Comando ENDIF
+										| IF '(' ExpressaoSimples ')' Comando ELSE Comando ENDIF
+										;
+
+ComandoWhile				: WHILE '(' ExpressaoSimples ')' Comando
+										;
+
+ComandoFor					: FOR  '(' ForInicio Forcondicao ForIncremento ')' Comando
+										;
+
+ForInicio						: Atribuicao ';'
+										| Declaracao ';'
+										| ';'
+										;
+
+Forcondicao					: ExpressaoSimples ';'
+										| ';'
+										;
+
+ForIncremento				: Atribuicao
+										|
+										;
+
+ComandoSwitch				: SWITCH '(' ExpressaoSimples ')' '{' ListaCasos '}'
+										;
+
+ListaCasos					:
+										| ListaCasos Caso			
+										;
+
+Caso								: CASE	Constante ':' ListaComandos
+										;
+
+Constante						: NUM
+										| STRINGS
+										;
+
+Declaracao					: TipoVariavel ListaIDs
+										;
+
+TipoVariavel				: INT
+										| FLOAT	
+										| CHAR
+										| DOUBLE
+										;
+
+ListaIDs						: ID '=' ExpressaoSimples
+										| ID
+										| ListaIDs ',' ID '=' ExpressaoSimples
+										| ListaIDs ',' ID
+										;
+
+Atribuicao					: ID '=' ExpressaoSimples
+										;
+
+ExpressaoSimples		: ExpressaoAritmetica
+										| ExpressaoRelacional
+										| ExpressaoLogica
+										;
+
+ExpressaoRelacional : ExpressaoSimples '<' ExpressaoSimples
+										| ExpressaoSimples '>' ExpressaoSimples
+										| ExpressaoSimples MAIOR ExpressaoSimples
+										| ExpressaoSimples MENOR ExpressaoSimples
+										| ExpressaoSimples IGUAL ExpressaoSimples
+										| ExpressaoSimples DIFERENTE ExpressaoSimples
+										;
+
+ExpressaoLogica			: ExpressaoSimples AND ExpressaoSimples
+										| ExpressaoSimples OR ExpressaoSimples
+										| NOT ExpressaoSimples
+										;
+
+ExpressaoAritmetica : ExpressaoAritmetica '+' ExpressaoAritmetica
+										| ExpressaoAritmetica '-' ExpressaoAritmetica
+										| ExpressaoAritmetica '*' ExpressaoAritmetica
+										| ExpressaoAritmetica '/' ExpressaoAritmetica
+										| '(' ExpressaoSimples ')'
+										| '-' ExpressaoAritmetica 
+										| Fator
+
+Fator 							: ID
+										| ID '[' ExpressaoSimples ']'
+										| NUM
+										| STRINGS
+										| ChamadaFuncao
+										;
+
+ChamadaFuncao				: ID '(' ArgumentosChamada ')'
+										; 
+
+ArgumentosChamada		: 
+										| ListaArgumentos
+										;
+
+ListaArgumentos			: ExpressaoSimples	
+										| ListaArgumentos ',' ExpressaoSimples
+										;
+
+%%
+
+void yyerror(const char *s) {
+    printf("syntax error na linha %d\n", linha);
+}
+
+void main(int argc, char **argv) {     
+    yyin = fopen(argv[1], "r");
+    if (yyin == NULL) {
+        printf("Erro ao abrir arquivo!\n");
+        exit(1);
+    }
+    yyparse();      
+}
+
+int yywrap() {
+    return 1;
+}
