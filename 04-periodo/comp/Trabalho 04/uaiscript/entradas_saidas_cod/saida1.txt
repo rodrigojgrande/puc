@@ -1,0 +1,9 @@
+main:
+	li $t0,10
+	move $s1,$t0
+	li $t1,3
+	sub $t2,$s1,$t1
+	move $s2,$t2
+	li $v0,10
+	syscall
+

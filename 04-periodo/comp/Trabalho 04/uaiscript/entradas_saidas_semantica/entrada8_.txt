@@ -1,0 +1,23 @@
+printf:
+	li $t0,0
+	move $s2,$t0
+	jr $ra
+
+main:
+	li $t2,20
+	move $s8,$t2
+	li $t3,4
+	move $s8,$t3
+L2:
+	li $t4,1
+	blt $s6,$s8,L1
+	li $t4,0
+L1:
+	beq $t4,0,L3
+	move $s1,$s0
+	jal printf
+	j L2
+L3:
+	li $v0,10
+	syscall
+
