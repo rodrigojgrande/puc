@@ -1,15 +1,16 @@
-int main() {
-	int a, b;
-	b = 60;
-	a = 0;
-	while(b > a){
-		if(a < 10)
-			a = a+(b/3);
-		else if(a < 20)
-			a = a+b/6;
-			else
-				a = a+1;
-			endif
-		endif
+interin main() {
+	interin a, b;
+	b fica_sendo 60;
+	a fica_sendo 0;
+
+	vai_ino(b maio_que a) {
+		uai_so(a meno_que 10)
+			a fica_sendo a soma_mais (b dividido_pur 3);
+		capai_memo uai_so(a meno_que 20)
+			a fica_sendo a soma_mais b dividido_pur 6;
+		capai_memo
+			a fica_sendo a soma_mais 1;
+		acabo_uai
+	acabo_uai
 	}
 }

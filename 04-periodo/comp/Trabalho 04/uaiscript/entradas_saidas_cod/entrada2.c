@@ -1,10 +1,11 @@
-int main() {
-	int a, b, z;
-	b = 10;
-	a = 33 - b;
-	if(a < b)
-		z = 5;
-	else
-		z = 0;
-	endif
+interin main() {
+	interin a, b, z;
+	b fica_sendo 10;
+	a fica_sendo 33 tira_menos b;
+
+	uai_so (a meno_que b)
+		z fica_sendo 5;
+	capai_memo
+		z fica_sendo 0;
+	acabo_uai
 }

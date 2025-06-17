@@ -1,16 +1,16 @@
-int soma(int x, int y) {
-	int z;
-	z = x + y;
+interin soma(interin x, interin y) {
+	interin z;
+	z fica_sendo x soma_mais y;
 }
 
-int sub(int x, int y) {
-	int z;
-	z = x + y;
+interin sub(interin x, interin y) {
+	interin z;
+	z fica_sendo x soma_mais y;
 }
 
-int main() {
-	int a, b;
-	b = 10;
-	a = 33 - b;
-	soma(a,b);
+interin main() {
+	interin a, b;
+	b fica_sendo 10;
+	a fica_sendo 33 tira_menos b;
+	soma(a, b);
 }
