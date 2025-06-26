@@ -20,25 +20,30 @@ void verifica_var_declarada(?);
 	} id_list;
 }
 
-%token <node> NUM 
-%token <val> ID 
-%token WHILE
+%token NUM 
+%token STRINGS
+%token ID 
 %token IF 
 %token ELSE
-%token ENDIF
-%token CHAR
+%token FOR
+%token WHILE
 %token INT
 %token FLOAT
+%token CHAR
 %token VOID
-%token OR
 %token AND
+%token OR
 %token NOT
-%token GE
-%token LE
-%token EQ
-%token NEQ
-%token DO
-%token STRING
+%token MENOR
+%token MAIOR
+%token IGUAL
+%token RETURN
+%token DOUBLE
+%token SWITCH
+%token CASE
+%token BREAK
+%token DIFERENTE
+%token ENDIF
 
 %type <val> Type TypeF
 %type <id_list> IDs ParamList ArgList
@@ -46,24 +51,19 @@ void verifica_var_declarada(?);
 %type <node> If While Compound_Stt DoWhile FunctionCall For
 
 %right '='
-
+%right NOT
+%left '+' '-'
+%left '*' '/'
 %left OR
 %left AND
-
-%nonassoc EQ NEQ
-
-%left '>' '<' GE LE
-
-%left '+' '-'
-%left '*' '/' '%'
-
-%right NOT
-
-%right '(' '['
+%nonassoc IGUAL DIFERENTE
+%nonassoc '<' '>' MAIOR MENOR
 
 
-%start ProgL
-%% 
+%start Programa
+%%
+
+
 ProgL : Prog { printf("%s",$1.code);} /* S código. */
     ;
     

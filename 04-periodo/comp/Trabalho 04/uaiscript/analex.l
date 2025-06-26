@@ -11,67 +11,61 @@ int yyerror(char *s) {
 }
 %}
 
-DIGITO [0-9]
-LETRA [a-zA-Z_]
+dig [0-9]
+letra [a-zA-Z_]
+string \"(\\.|[^"])*\"
 
 %%
+"uai_so"            { return IF; }
+"capai_memo"        { return ELSE; }
+"repete_ai_so"      { return FOR; }
+"vai_ino"           { return WHILE; }
+"interin"           { return INT; }
+"picadin"           { return FLOAT; }
+"letrin"            { return CHAR; }
+"vazio_so"          { return VOID; }
+"e_so"              { return AND; }
+"ou_sinao"          { return OR; }
+"de_jeito_nenhum"   { return NOT; }
+"meno_ou_igualzin"  { return MENOR; }
+"maio_ou_igualzin"  { return MAIOR; }
+"soma_mais"         { return '+'; }
+"tira_menos"        { return '-'; }
+"veis"              { return '*'; }
+"dividido_pur"      { return '/'; }
+"meno_que"          { return '<'; }
+"maio_que"          { return '>'; }
+"("                 { return '('; }
+")"                 { return ')'; }
+"{"                 { return '{'; }
+"}"                 { return '}'; }
+"["                 { return '[';}
+"]"                 { return ']';}
+","                 { return ','; }
+";"                 { return ';'; }
+":"                 { return ':'; }
+"fica_sendo"        { return '='; }   
+"igualzin"          { return IGUAL; }
+"vorta"             { return RETURN; }
 
+"grandin_dimais"    { return DOUBLE;}
+"muda_o_trem"       { return SWITCH;}
+"casim"             { return CASE;}
+"larga_mao"         { return BREAK;}
+"num_ehigual"       { return DIFERENTE;}
+"acabo_uai"         { return ENDIF;}
 
-"while" {return WHILE;}
-"if"	{return IF;}
-"else"	{return ELSE;}
-"int"  {return INT;}
-"float" {return FLOAT;}
-"char"  {return CHAR;} 
-"void" {return VOID;}
-"endif" {return ENDIF;}
+{dig}+(\.{dig}+)?   { ylval.node.tipo = FLOAT; yylval.node.place = atoi(yytext); return NUM; }       
 
+{string} { return STRINGS; } 
 
-"+" {return '+';}
-"-" {return '-';}
-"*" {return '*';}
-"/" {return '/';}
-"%" {return '%';}
-
-
-">="  {return GE;}
-"<=" {return LE;}
-">" {return '>';}
-"<" {return '<';}
-"==" {return EQ;} 	
-
-
-"&&" {return AND;}
-"||" {return OR;}
-"!" {return NOT;}
-
-
-"=" {return '=';}
-y
-
-"["	  {return '[';}
-"]"	  {return ']';}
-"("	  {return '(';}
-")"   {return ')';}
-"{"	  {return '{';}
-"}"   {return '}';}
-";"   {return ';';}
-","   {return ',';}
-
-
-{DIGITO}+("."{DIGITO}+) { ylval.node.tipo = FLOAT; yylval.node.place = atoi(yytext);return NUM;}
-
-{DIGITO}+	{ yylval.node.tipo = INT; yylval.node.place = strtol(yytext, NULL, 10); return NUM;}
-
-
-{LETRA}({LETRA}|{DIGITO})*  { yylval.val = insere(yytext); return ID;}  
-                           
-\"[^\"]*\"   { return STRING; }
+{letra}({letra}|{dig})* { insere(yytext); return ID; } 
 
 [ \t\r] {}
-\n	{ linha++; }
-.	{printf("erro lexico na linha %d - %s\n",
-             linha, yytext); }
+\n { linha++; }
+
+. {printf("erro lexico na linha %d - %s\n", linha, yytext); }
+
 %%
 
 #ifndef yywrap
